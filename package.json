@@ -1,0 +1,73 @@
+{
+  "name": "@atomicloud/diene.result",
+  "version": "1.0.0",
+  "description": "Result and Option monads with dual-format ESM/CJS builds and a dependency-light /test-helper for AtomiCloud/diene.bun-result",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./test-helper": {
+      "import": {
+        "types": "./dist/test-helper.d.ts",
+        "default": "./dist/test-helper.js"
+      },
+      "require": {
+        "types": "./dist/test-helper.d.cts",
+        "default": "./dist/test-helper.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist",
+    "skills"
+  ],
+  "sideEffects": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AtomiCloud/diene.bun-result.git"
+  },
+  "homepage": "https://github.com/AtomiCloud/diene.bun-result#readme",
+  "bugs": {
+    "url": "https://github.com/AtomiCloud/diene.bun-result/issues"
+  },
+  "license": "MIT",
+  "author": "AtomiCloud",
+  "keywords": [
+    "atomicloud",
+    "result",
+    "option",
+    "monad",
+    "typescript",
+    "esm",
+    "commonjs",
+    "bun"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.2",
+    "@biomejs/biome": "^2.5.1",
+    "@types/bun": "^1.3.14",
+    "@types/node": "^26.0.1",
+    "dts-bundle-generator": "^9",
+    "knip": "^6.23.0",
+    "publint": "^0.3.16",
+    "should": "^13.2.3",
+    "typescript": "^6.0.3"
+  }
+}
